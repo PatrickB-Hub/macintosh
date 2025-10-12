@@ -1,0 +1,24 @@
+{
+  "name": "macintosh-128k",
+  "version": "1.0.0",
+  "description": "Ein interaktiver Macintosh 128K in Three.js, mit laufendem System 6 im Browser.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "tsc",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.93.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
+  }
+}
