@@ -1,0 +1,1153 @@
+{
+  "componentTree": [
+    {
+      "id": "macSet",
+      "name": "Macintosh 128K set",
+      "level": "macro",
+      "role": "container",
+      "parent": null,
+      "material": "containerHidden",
+      "dimensions": {
+        "width": 0.001,
+        "height": 0.001,
+        "depth": 0.001
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "mainUnit",
+      "name": "Main unit rear case",
+      "level": "macro",
+      "role": "body",
+      "parent": "macSet",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.2444,
+        "height": 0.2592,
+        "depth": 0.258
+      },
+      "transform": {
+        "position": [
+          0,
+          0.1996,
+          -0.0095
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "frontBezel",
+      "name": "Front bezel shell",
+      "level": "macro",
+      "role": "shell",
+      "parent": "mainUnit",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.246,
+        "height": 0.28600000000000003,
+        "depth": 0.021
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.0126,
+          0.1375
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "frontOutline": {
+          "width": 0.246,
+          "height": 0.28600000000000003,
+          "cornerRadius": 0.008,
+          "depth": 0.021,
+          "frontBevel": 0.002,
+          "holes": [
+            {
+              "id": "screen",
+              "cx": 0.0,
+              "cy": 0.03231428571428574,
+              "w": 0.198,
+              "h": 0.17369142857142855,
+              "r": 0.012
+            },
+            {
+              "id": "floppy",
+              "cx": 0.038,
+              "cy": -0.1030628571428571,
+              "w": 0.107,
+              "h": 0.02418057142857144,
+              "r": 0.002
+            }
+          ]
+        }
+      },
+      "attachment": null
+    },
+    {
+      "id": "screenRecess",
+      "name": "Screen recess walls",
+      "level": "meso",
+      "role": "panel",
+      "parent": "frontBezel",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.214,
+        "height": 0.18969142857142857,
+        "depth": 0.016
+      },
+      "transform": {
+        "position": [
+          0,
+          0.03231,
+          0.0025
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "loft": {
+          "mouth": [
+            0.198,
+            0.17369142857142855,
+            0.012
+          ],
+          "inner": [
+            0.1814,
+            0.1475542857142857,
+            0.008
+          ],
+          "innerOffsetY": -0.004257142857142848,
+          "depth": 0.016
+        }
+      },
+      "attachment": null
+    },
+    {
+      "id": "crtGlass",
+      "name": "CRT glass",
+      "level": "meso",
+      "role": "display",
+      "parent": "frontBezel",
+      "material": "crtGlass",
+      "dimensions": {
+        "width": 0.19140000000000001,
+        "height": 0.1575542857142857,
+        "depth": 0.006
+      },
+      "transform": {
+        "position": [
+          0,
+          0.02806,
+          -0.006
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null,
+      "actionProfile": {
+        "sockets": [
+          {
+            "id": "screenCenter",
+            "localPosition": [
+              0,
+              0,
+              0.006
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "floppyPanel",
+      "name": "Floppy drive bezel recess",
+      "level": "meso",
+      "role": "panel",
+      "parent": "frontBezel",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.11699999999999999,
+        "height": 0.03418057142857144,
+        "depth": 0.004
+      },
+      "transform": {
+        "position": [
+          0.038,
+          -0.10306,
+          0.0085
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "steppedOutline": {
+          "tray": {
+            "x0": -0.05363020408163267,
+            "x1": 0.013040816326530612,
+            "y0": -0.002554285714285731,
+            "y1": 0.009365714285714283
+          },
+          "shutterBox": {
+            "x0": 0.013040816326530612,
+            "x1": 0.05353877551020408,
+            "y0": -0.012090285714285748,
+            "y1": 0.009365714285714283
+          },
+          "depth": 0.003,
+          "cornerRadius": 0.0035
+        }
+      },
+      "attachment": null,
+      "actionProfile": {
+        "sockets": [
+          {
+            "id": "floppyInsert",
+            "localPosition": [
+              0.00133,
+              0.00664,
+              0.002
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "floppySlot",
+      "name": "Floppy insertion slot",
+      "level": "micro",
+      "role": "detail",
+      "parent": "floppyPanel",
+      "material": "slotBlack",
+      "dimensions": {
+        "width": 0.089,
+        "height": 0.003,
+        "depth": 0.012
+      },
+      "transform": {
+        "position": [
+          0.00133,
+          0.00664,
+          -0.004
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "floppyShutter",
+      "name": "Disk shutter window",
+      "level": "micro",
+      "role": "detail",
+      "parent": "floppyPanel",
+      "material": "slotBlack",
+      "dimensions": {
+        "width": 0.03,
+        "height": 0.008,
+        "depth": 0.01
+      },
+      "transform": {
+        "position": [
+          0.03312,
+          0.00426,
+          -0.004
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "ejectHole",
+      "name": "Manual eject pin hole",
+      "level": "micro",
+      "role": "detail",
+      "parent": "floppyPanel",
+      "material": "slotBlack",
+      "dimensions": {
+        "width": 0.0024,
+        "height": 0.004,
+        "depth": 0.0024
+      },
+      "transform": {
+        "position": [
+          0.05019,
+          -0.00732,
+          0.0005
+        ],
+        "rotation": [
+          1.5707963267948966,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": {
+        "parentSocket": "ejectPinSocket",
+        "localStart": [
+          0.05019,
+          -0.00732,
+          0.002
+        ]
+      }
+    },
+    {
+      "id": "appleBadge",
+      "name": "Rainbow Apple badge",
+      "level": "meso",
+      "role": "decal-carrier",
+      "parent": "frontBezel",
+      "material": "badgePlate",
+      "dimensions": {
+        "width": 0.015,
+        "height": 0.0164,
+        "depth": 0.0012
+      },
+      "transform": {
+        "position": [
+          -0.09706,
+          -0.11345,
+          0.0109
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "plinth",
+      "name": "Plinth (base the case stands on)",
+      "level": "macro",
+      "role": "base",
+      "parent": "mainUnit",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.243,
+        "height": 0.07,
+        "depth": 0.2615
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.1646,
+          0.00325
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "sideProfileYZ": [
+          [
+            -0.13075,
+            -0.035
+          ],
+          [
+            0.13075,
+            -0.035
+          ],
+          [
+            0.13075,
+            0.009
+          ],
+          [
+            0.12375,
+            0.009
+          ],
+          [
+            0.12375,
+            0.035
+          ],
+          [
+            -0.13075,
+            0.035
+          ]
+        ],
+        "skinThickness": 0.004
+      },
+      "attachment": null,
+      "actionProfile": {
+        "sockets": [
+          {
+            "id": "keyboardJack",
+            "localPosition": [
+              0.088,
+              -0.013,
+              0.13225
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ventGrille-l",
+      "name": "Plinth side wall with vents (left)",
+      "level": "meso",
+      "role": "vent",
+      "parent": "plinth",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.004,
+        "height": 0.07,
+        "depth": 0.2615
+      },
+      "transform": {
+        "position": [
+          0.1195,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "ventGrille-r",
+      "name": "Plinth side wall with vents (right)",
+      "level": "meso",
+      "role": "vent",
+      "parent": "plinth",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.004,
+        "height": 0.07,
+        "depth": 0.2615
+      },
+      "transform": {
+        "position": [
+          -0.1195,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "jackPanel",
+      "name": "Keyboard jack panel",
+      "level": "meso",
+      "role": "port",
+      "parent": "plinth",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.04,
+        "height": 0.016,
+        "depth": 0.0015
+      },
+      "transform": {
+        "position": [
+          0.078,
+          -0.013,
+          0.1315
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "jackOpening": {
+          "cx": 0.01,
+          "w": 0.009,
+          "h": 0.01
+        }
+      },
+      "attachment": null
+    },
+    {
+      "id": "keyboardCable",
+      "name": "Keyboard coiled cord",
+      "level": "meso",
+      "role": "cable",
+      "parent": "plinth",
+      "material": "cableGrey",
+      "dimensions": {
+        "width": 0.0018,
+        "height": 0.0018,
+        "depth": 0.0018
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "coil": {
+          "radius": 0.0026,
+          "pitch": 0.0035
+        },
+        "tubePath": {
+          "points": [
+            [
+              0.088,
+              -0.013,
+              0.14425
+            ],
+            [
+              0.091,
+              -0.016,
+              0.15175
+            ],
+            [
+              0.096,
+              -0.019,
+              0.16075
+            ],
+            [
+              0.104,
+              -0.0305,
+              0.17675
+            ],
+            [
+              0.112,
+              -0.0305,
+              0.19241
+            ],
+            [
+              0.118,
+              -0.025,
+              0.21341
+            ]
+          ],
+          "radius": 0.0008,
+          "closed": false
+        }
+      },
+      "attachment": {
+        "parentSocket": "keyboardJack",
+        "localStart": [
+          0.088,
+          -0.013,
+          0.13225
+        ]
+      }
+    },
+    {
+      "id": "keyboard",
+      "name": "M0110 keyboard case",
+      "level": "macro",
+      "role": "input-device",
+      "parent": "macSet",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.33,
+        "height": 0.03,
+        "depth": 0.147
+      },
+      "transform": {
+        "position": [
+          -0.0035,
+          0.015,
+          0.2769
+        ],
+        "rotation": [
+          0,
+          -0.0063,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "sideProfileYZ": [
+          [
+            -0.0735,
+            -0.015
+          ],
+          [
+            0.0735,
+            -0.015
+          ],
+          [
+            0.0735,
+            -0.0009999999999999992
+          ],
+          [
+            0.0655,
+            0.006999999999999999
+          ],
+          [
+            -0.06949999999999999,
+            0.015
+          ],
+          [
+            -0.0735,
+            0.011
+          ]
+        ]
+      },
+      "attachment": null
+    },
+    {
+      "id": "keyboardBasePlate",
+      "name": "Keyboard base plate",
+      "level": "meso",
+      "role": "base",
+      "parent": "keyboard",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.327,
+        "height": 0.008,
+        "depth": 0.144
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.011,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "keyWell",
+      "name": "Key well floor",
+      "level": "meso",
+      "role": "panel",
+      "parent": "keyboard",
+      "material": "slotBlack",
+      "dimensions": {
+        "width": 0.2878,
+        "height": 0.002,
+        "depth": 0.0993
+      },
+      "transform": {
+        "position": [
+          0.0,
+          0.004,
+          -0.01185
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "keyBlock",
+      "name": "Keycap block (58 keys)",
+      "level": "meso",
+      "role": "key-array",
+      "parent": "keyboard",
+      "material": "keycapTaupe",
+      "dimensions": {
+        "width": 0.2858,
+        "height": 0.011,
+        "depth": 0.0953
+      },
+      "transform": {
+        "position": [
+          0.0,
+          0.0105,
+          -0.01185
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "mouse",
+      "name": "M0100 mouse body",
+      "level": "macro",
+      "role": "input-device",
+      "parent": "macSet",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.062,
+        "height": 0.034,
+        "depth": 0.11
+      },
+      "transform": {
+        "position": [
+          0.2174,
+          0.017,
+          0.3844
+        ],
+        "rotation": [
+          0,
+          -0.2818,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "sideProfileYZ": [
+          [
+            -0.055,
+            -0.017
+          ],
+          [
+            0.055,
+            -0.017
+          ],
+          [
+            0.055,
+            0.001
+          ],
+          [
+            0.015,
+            0.017
+          ],
+          [
+            -0.055,
+            0.017
+          ]
+        ]
+      },
+      "attachment": null,
+      "actionProfile": {
+        "sockets": [
+          {
+            "id": "mouseGrip",
+            "localPosition": [
+              0,
+              0.017,
+              0.005
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mouseBasePlate",
+      "name": "Mouse base plate",
+      "level": "meso",
+      "role": "base",
+      "parent": "mouse",
+      "material": "housingBeige",
+      "dimensions": {
+        "width": 0.06,
+        "height": 0.004,
+        "depth": 0.108
+      },
+      "transform": {
+        "position": [
+          0,
+          -0.015,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "mouseButton",
+      "name": "Mouse button",
+      "level": "meso",
+      "role": "button",
+      "parent": "mouse",
+      "material": "keycapTaupe",
+      "dimensions": {
+        "width": 0.04,
+        "height": 0.002,
+        "depth": 0.032
+      },
+      "transform": {
+        "position": [
+          0,
+          0.0164,
+          -0.034
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {},
+      "attachment": null
+    },
+    {
+      "id": "mouseCable",
+      "name": "Mouse cable",
+      "level": "macro",
+      "role": "cable",
+      "parent": "mouse",
+      "material": "cableGrey",
+      "dimensions": {
+        "width": 0.0035,
+        "height": 0.0035,
+        "depth": 0.0035
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      "geometryDescriptor": {
+        "tubePath": {
+          "points": [
+            [
+              -0.0,
+              -0.005,
+              -0.056
+            ],
+            [
+              0.0258,
+              -0.0145,
+              -0.0907
+            ],
+            [
+              0.0324,
+              -0.0145,
+              -0.1759
+            ],
+            [
+              -0.0187,
+              -0.0145,
+              -0.2444
+            ],
+            [
+              -0.1345,
+              -0.0145,
+              -0.33
+            ],
+            [
+              -0.1979,
+              -0.0145,
+              -0.4053
+            ],
+            [
+              -0.2503,
+              -0.0145,
+              -0.4423
+            ]
+          ],
+          "radius": 0.002,
+          "closed": false
+        }
+      },
+      "attachment": {
+        "parentSocket": "mouseCableExit",
+        "localStart": [
+          -0.0,
+          -0.005,
+          -0.056
+        ]
+      }
+    }
+  ],
+  "materials": [
+    {
+      "id": "housingBeige",
+      "baseColor": "#C4BD99",
+      "albedo": {
+        "secondary": [
+          "#DCD9C6",
+          "#D8D5C2",
+          "#DEDBC8"
+        ]
+      },
+      "roughness": {
+        "base": 0.45
+      }
+    },
+    {
+      "id": "keycapTaupe",
+      "baseColor": "#918D76",
+      "albedo": {
+        "secondary": [
+          "#7C744F",
+          "#988E6C",
+          "#4F471A"
+        ]
+      },
+      "roughness": {
+        "base": 0.6
+      }
+    },
+    {
+      "id": "crtGlass",
+      "baseColor": "#3F5550",
+      "albedo": {
+        "secondary": [
+          "#CDC7AA",
+          "#556A66",
+          "#999C8E"
+        ]
+      },
+      "roughness": {
+        "base": 0.12
+      },
+      "clearcoat": {
+        "base": 1.0
+      },
+      "clearcoatRoughness": {
+        "base": 0.08
+      }
+    },
+    {
+      "id": "slotBlack",
+      "baseColor": "#040204",
+      "albedo": {
+        "secondary": [
+          "#BAAF80",
+          "#100B09",
+          "#3D3626"
+        ]
+      },
+      "roughness": {
+        "base": 0.8
+      }
+    },
+    {
+      "id": "badgePlate",
+      "baseColor": "#CABD97",
+      "albedo": {
+        "secondary": [
+          "#DF4912",
+          "#AEAD7A",
+          "#544397"
+        ]
+      },
+      "roughness": {
+        "base": 0.35
+      }
+    },
+    {
+      "id": "cableGrey",
+      "baseColor": "#9A968A",
+      "albedo": {
+        "secondary": [
+          "#BCB592",
+          "#B0AB8D",
+          "#CCC8B8"
+        ]
+      },
+      "roughness": {
+        "base": 0.7
+      }
+    },
+    {
+      "id": "containerHidden",
+      "baseColor": "#FFFFFF",
+      "albedo": {
+        "secondary": [
+          "#FFFFFF",
+          "#FFFFFF"
+        ]
+      },
+      "roughness": {
+        "base": 1.0
+      },
+      "opacity": {
+        "base": 0.0
+      }
+    }
+  ],
+  "repetitionSystems": [
+    {
+      "id": "keycapArray",
+      "level": "meso",
+      "placement": {
+        "mode": "rows",
+        "rows": [
+          {
+            "offsetU": 0.0,
+            "keys": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2
+            ]
+          },
+          {
+            "offsetU": 0.0,
+            "keys": [
+              1.5,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1.5
+            ]
+          },
+          {
+            "offsetU": 0.0,
+            "keys": [
+              1.75,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1.25
+            ]
+          },
+          {
+            "offsetU": 0.0,
+            "keys": [
+              1.25,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              2.75
+            ]
+          },
+          {
+            "offsetU": 0.5,
+            "keys": [
+              1.25,
+              1.25,
+              7.5,
+              1.5,
+              1.25
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ventSlots",
+      "level": "micro",
+      "placement": {
+        "mode": "rect-stack",
+        "perSide": 7,
+        "pitch": 0.0042,
+        "slotLength": 0.18,
+        "slotHeight": 0.0022,
+        "cornerRadius": 0.0009,
+        "centerZ": 0.0,
+        "firstY": -0.0126,
+        "mirroredOn": [
+          "ventGrille-l",
+          "ventGrille-r"
+        ]
+      }
+    },
+    {
+      "id": "keyLegends",
+      "level": "micro",
+      "placement": {
+        "mode": "follow",
+        "target": "keycapArray",
+        "offsetOnTop": [
+          -0.003,
+          0.003
+        ]
+      }
+    }
+  ]
+}
