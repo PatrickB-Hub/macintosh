@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eaece8" />
+    <meta
+      name="description"
+      content="An interactive Macintosh 128K. A small tribute to the early days of personal computing, right in your browser."
+    />
+    <title>Hello, again. — Macintosh 128K</title>
+    <link rel="stylesheet" href="/src/style.scss" />
+  </head>
+  <body>
+    <header class="masthead">
+      <a href="./" aria-label="Back to start">THE MACINTOSH STUDY<span>EST. 1984 · REIMAGINED</span></a
+      ><span class="edition">NO. 001 / INTERACTIVE OBJECTS</span>
+    </header>
+    <main>
+      <section id="intro" aria-labelledby="title">
+        <p class="eyebrow"><span></span> A LITTLE PIECE OF COMPUTER HISTORY</p>
+        <h1 id="title">Hello,<br /><em>again.</em></h1>
+        <p class="description">
+          Big ideas. Small screen.<br />Discover the 1984 Macintosh –<br class="desktop-break" />
+          and bring it to life.
+        </p>
+        <button id="start" class="primary" disabled>Loading scene … <span aria-hidden="true">↗</span></button>
+        <p class="start-note">
+          Right in your browser. With a pinch of nostalgia.<br />Apps and games are on the
+          <strong>“Infinite HD”</strong> drive.
+        </p>
+        <dl class="specs">
+          <div>
+            <dt>MODEL</dt>
+            <dd>Macintosh 128K</dd>
+          </div>
+          <div>
+            <dt>YEAR</dt>
+            <dd>1984</dd>
+          </div>
+        </dl>
+      </section>
+      <div id="stage" aria-label="Interactive Macintosh scene"></div>
+      <nav id="bar" aria-label="Scene controls">
+        <button id="reset">Reset view <span aria-hidden="true">↺</span></button>
+      </nav>
+      <p id="session-note">Click the screen to get started. Press Esc to return to the overview.</p>
+    </main>
+    <footer>
+      <span class="footer-title">by <a target="_blank" href="https://patrickbecker.work">Patrick Becker</a></span
+      ><span class="scene-hint">Drag to rotate <i>·</i> Scroll to zoom</span
+      ><span class="footer-index">01 — THE DESK</span>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

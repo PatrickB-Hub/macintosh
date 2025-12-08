@@ -1,0 +1,428 @@
+$mobile: 700px;
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #273b3e;
+  background: #eaece8;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100svh;
+  min-height: 640px;
+  overflow: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+canvas:focus-visible {
+  outline: 2px solid #345c61;
+  outline-offset: 5px;
+}
+
+.masthead {
+  position: absolute;
+  z-index: 3;
+  top: 36px;
+  left: 4.4%;
+  right: 4.4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  pointer-events: none;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    pointer-events: auto;
+  }
+
+  a span {
+    display: block;
+    margin-top: 9px;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    opacity: 0.65;
+  }
+}
+
+.edition {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  padding-top: 2px;
+}
+
+#intro {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 7%;
+  width: 31%;
+  transform: translateY(-46%);
+}
+
+.eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  span {
+    flex: 0 0 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #738c74;
+  }
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(72px, 7.4vw, 124px);
+  line-height: 0.94;
+  letter-spacing: -0.075em;
+  margin: 30px 0;
+
+  em {
+    font-weight: 400;
+    color: #527378;
+  }
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #526163;
+  margin-bottom: 28px;
+}
+
+.primary {
+  border: 1px solid #2d484b;
+  background: #2d484b;
+  color: #f5f3ea;
+  border-radius: 4px;
+  padding: 17px 21px;
+  min-width: 218px;
+  text-align: left;
+  font-size: 12px;
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 25px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+
+  &:hover:enabled {
+    background: #416165;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.6;
+  }
+
+  span {
+    font-size: 17px;
+    line-height: 12px;
+  }
+}
+
+.start-note {
+  margin: 13px 0 36px;
+  font-size: 10px;
+  color: #697574;
+}
+
+.specs {
+  display: flex;
+  gap: 35px;
+  border-top: 1px solid #c9d0cb;
+  padding-top: 19px;
+  max-width: 275px;
+
+  dt {
+    font-size: 8px;
+    letter-spacing: 0.16em;
+    color: #718080;
+    margin-bottom: 8px;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 11px;
+  }
+}
+
+#stage {
+  position: absolute;
+  inset: 0 0 0 34%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        90deg,
+        rgb(234 236 232 / 1) 0%,
+        rgb(234 236 232 / 0.957) 3%,
+        rgb(234 236 232 / 0.844) 6%,
+        rgb(234 236 232 / 0.684) 9%,
+        rgb(234 236 232 / 0.5) 12%,
+        rgb(234 236 232 / 0.316) 15%,
+        rgb(234 236 232 / 0.156) 18%,
+        rgb(234 236 232 / 0.043) 21%,
+        rgb(234 236 232 / 0) 24%
+      ),
+      linear-gradient(0deg, #eaece8 0%, transparent 14%);
+  }
+}
+
+canvas[data-pointer-focus]:focus-visible {
+  outline: none;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#bar {
+  position: absolute;
+  z-index: 3;
+  right: 4.4%;
+  bottom: 89px;
+  display: flex;
+  gap: 8px;
+
+  button {
+    color: #354f52;
+    border: 1px solid #526b6a40;
+    background: #eff1ecdf;
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    padding: 11px 14px;
+    font-size: 10px;
+  }
+
+  button:hover {
+    background: #fff;
+  }
+
+  button span {
+    margin-left: 14px;
+  }
+}
+
+footer {
+  position: absolute;
+  z-index: 3;
+  bottom: 28px;
+  left: 4.4%;
+  right: 4.4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #778a852f;
+  padding-top: 19px;
+  font-size: 8px;
+  letter-spacing: 0.13em;
+  pointer-events: none;
+
+  a {
+    color: inherit;
+    pointer-events: auto; // the footer lets clicks through to the scene; the author link takes them
+  }
+}
+
+.scene-hint {
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  color: #546969;
+
+  i {
+    margin: 0 10px;
+    font-style: normal;
+  }
+}
+
+#session-note {
+  display: none;
+}
+
+body {
+  &.playing #intro {
+    display: none;
+  }
+
+  &.playing #stage {
+    inset: 0;
+  }
+
+  &.playing #stage::after {
+    background: linear-gradient(0deg, #eaece8, transparent 15%);
+  }
+
+  &.playing #session-note {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 4.4%;
+    bottom: 88px;
+    font-size: 11px;
+    padding: 12px;
+    border-radius: 4px;
+    background: #eff1ecdf;
+  }
+}
+
+@media (max-width: $mobile) {
+  body {
+    min-height: 740px;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .masthead {
+    top: 24px;
+    left: 7%;
+    right: 7%;
+  }
+
+  .edition {
+    display: none;
+  }
+
+  #intro {
+    left: 7%;
+    top: 105px;
+    width: 86%;
+    transform: none;
+  }
+
+  .eyebrow {
+    font-size: 7px;
+  }
+
+  h1 {
+    font-size: clamp(48px, 17vw, 68px);
+    margin: 18px 0 14px;
+
+    br {
+      display: none;
+    }
+
+    em {
+      margin-left: 0.12em;
+    }
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .primary {
+    padding: 14px 17px;
+    font-size: 11px;
+  }
+
+  .start-note {
+    margin: 11px 0 0;
+    font-size: 9px;
+  }
+
+  .specs {
+    display: none;
+  }
+
+  #stage {
+    inset: 325px 0 100px;
+
+    &::after {
+      background: linear-gradient(180deg, #eaece8, transparent 18%, transparent 82%, #eaece8);
+    }
+  }
+
+  #bar {
+    left: 7%;
+    right: 7%;
+    bottom: 76px;
+    justify-content: center;
+
+    button {
+      font-size: 9px;
+      padding: 10px 12px;
+    }
+  }
+
+  footer {
+    left: 7%;
+    right: 7%;
+    bottom: 22px;
+    padding-top: 13px;
+  }
+
+  .footer-title {
+    display: none;
+  }
+
+  .scene-hint {
+    font-size: 8px;
+  }
+
+  .footer-index {
+    font-size: 7px;
+  }
+
+  body {
+    &.playing #stage {
+      inset: 85px 0 145px;
+    }
+
+    &.playing #session-note {
+      left: 7%;
+      right: 7%;
+      bottom: 112px;
+      font-size: 10px;
+      text-align: center;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
